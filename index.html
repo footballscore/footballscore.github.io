@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(232, 226, 219);
+    }
+
+    .container {
+      display: flex;
+      justify-content: left;
+      width: 100%;
+      gap: 5px;
+    }
+
+    .main-container{
+      width: 80%;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .aside{
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .main{
+      width: 70%;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: red;
+      justify-content: center;
+      width: 100%;
+      padding: 20px 35px;
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 50%;
+
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    section {
+      margin: 5px 0px 0px 0px;
+      width: 100%;
+      background-color: white;
+    }
+
+    #logo {
+        width: 55px;
+border-radius: 50%;
+cursor: pointer;
+    }
+
+    #logo-sm {
+      width: 35px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    #logo-title {
+      font-family: "Poppins", sans-serif;
+      cursor: pointer;
+    }
+    
+    #search{
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 4px;
+      width: 50%;
+      border: 1.5px solid black;
+      border-radius: 35px 35px;
+      padding: 5px 5px;
+    }
+    
+    .seg {
+      border-bottom: 1px solid black;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 3px;
+      text-align: center;
+    }
+
+    .nav-item {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    .nav-container{
+      display: flex;
+      align-items: center;
+      background-color: white;
+      justify-content: space-around;
+      width: 80%;
+      padding: 5px;
+    }
+
+    .nav-btns {
+      display: flex;
+    }
+
+    .btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 10px 3px;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .feature {
+      display: flex;
+      height: 150px;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      color: rgb(238, 224, 224);
+    }
+
+    .ad {
+      display: block;
+      cursor: pointer;
+      height: 65px;
+    }
+
+    #copy {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      justify-content: center;
+      padding: 5px;
+    }
+
+    #fanzone {
+      flex: 1;
+    }
+
+    #search-box{
+      outline: none;
+      border: none;
+      margin: 2px;
+      width: 100%;
+    }
+
+    #brands{
+      display: flex;
+      gap: 25px;
+    }
+
+    #brands> i{
+      cursor: pointer;
+    }
+
+    .news>div{
+      height: 100%;
+      padding: 4px;
+      margin-right: 2px;
+    }
+
+    @media (max-width:50rem) {
+      .main-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container>div{
+        width: 100%;
+        flex: 1, 1, auto;
+      }
+
+      .nav-container{
+        width: 100%;
+      }
+
+      .nav-btns{
+        display: none;
+      }
+
+      header {
+        padding: 0;
+      }
+
+      .main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .aside{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      #logo {
+        width: 35px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      #logo-title {
+        font-size: medium;
+      }
+
+      .ad{
+        width: 90%;
+        height: 35px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+      <div class="nav-container">
+    <div class="logo">
+      <img src="./Football Score-01.jpg" alt="logo" id="logo">
+      <h1 id="logo-title">Football Score</h1>
+    </div>
+    <nav>
+        <div class="nav-item" id="search">
+          <input type="search" name="search" id="search-box">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="nav-item" id="auth"><i class="fa-regular fa-user"></i></div>
+        <div class="nav-item" id="menu"><i class="fa-solid fa-gear"></i></div>
+    </nav>
+      </div>
+    <div class="nav-btns">
+      <div class="btn">home</div>
+      <div class="btn">news</div>
+      <div class="btn">scores & fixtures</div>
+      <div class="btn">results</div>
+      <div class="btn">standings</div>
+      <div class="btn">competitions</div>
+      <div class="btn">more</div>
+      <div class="btn">contact us</div>
+    </div>
+  </header>
+  <div class="main-container">
+ <section class="ad">Advertisement</section> 
+  <div class="container">
+    <main class="main">
+      <section class="feature news">
+        <div class="new1">News1</div>
+        <div class="new2">News2</div>
+      </section>
+      <section class="feature scores-and-fixtures">scores & Fixtures</section>
+      <section class="ad">advertisement</section>
+      <section class="feature standings">standings</section>
+    </main>
+    <aside class="aside">
+      <section class="ad">Advertisement</section>
+      <section class="feature" id="fanzone">fanzone</section>
+      <section class="ad">Advertisement</section>
+    </aside>
+  </div>
+  <section class="feature competitions">competitions</section>
+  <section>
+  <footer>
+    <div class="seg">
+      Follow us on:
+      <div id="brands">
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-x-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-youtube"></i>
+      <i class="fa-brands fa-tiktok"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+    <div class="seg">
+      <div>
+      <a href="">Terms & Conditions</a>
+      <a href="">Privacy Policy</a>
+      </div>
+      <div>
+      <a href="">Contact Us</a>
+      <a href="">About Us</a>
+      </div>
+      <div>
+      <a href="">Advertise with Us</a>
+      <a href="">Remove ads</a>
+      </div>
+    </div>
+      <div id="copy">
+      <img src="./Football Score-01.jpg" alt="" id="logo-sm">
+      <b>Football Score</b>
+      &copy; 2025 UG ALL RIGHTS RESERVED
+      </div>
+  </footer>
+  </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
